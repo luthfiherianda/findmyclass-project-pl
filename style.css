@@ -16,15 +16,16 @@ body {
 
 /* --- Header --- */
 .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(to right, #00aaff, #004a99);
-    color: white;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #00aaff, #004a99);
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 70px;
 }
 
 /* === Teks Judul Utama === */
@@ -109,13 +110,19 @@ body {
     justify-content: space-between;
     padding: 16px 5px;
 }
-.logo-text{
-    display: flex;
-    justify-content: center ;
-    text-align: center;
-    color: white;
-    gap: 5px;
+.logo-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: white;
 }
+
+.logo-text h1 {
+  font-size: 20px;
+  padding-top: 3px;
+}
+
 .logo-sidebar {
   height: 30px;
 }
