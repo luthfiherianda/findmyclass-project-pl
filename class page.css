@@ -293,3 +293,166 @@ body {
 .schedule-btn:hover{
   background-color: #2e75e9;
 }
+
+/* === POPUP BOOKING BERHASIL === */
+.success-popup {
+  text-align: center;
+  display: none;
+  padding: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  z-index: 2000;
+}
+
+.success-popup h3 {
+  margin-top: 15px;
+  color: #007bff;
+}
+
+.success-popup p {
+  font-size: 14px;
+  margin: 10px 0 20px;
+}
+
+.success-popup button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1500;
+}
+
+.popup {
+  display: none;
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.popup h2 {
+  background: #004080;
+  color: white;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  margin: -20px -20px 15px -20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.popup .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.popup .info span {
+  margin-left: 10px;
+}
+
+.popup .warning {
+  background: #fff0f0;
+  border-left: 4px solid red;
+  padding: 10px;
+  color: red;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.popup .buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup .buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup .ubah {
+  background: #ccc;
+  color: #333;
+}
+
+.popup .konfirmasi {
+  background: #007bff;
+  color: white;
+}
+
+.popup .icon {
+  width: 18px;
+}
+
+/* Popup success tambahan */
+.success-popup {
+  text-align: center;
+  display: none;
+  padding: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  z-index: 2000;
+}
+
+.success-popup h3 {
+  margin-top: 15px;
+  color: #007bff;
+}
+
+.success-popup p {
+  font-size: 14px;
+  margin: 10px 0 20px;
+}
+
+.success-popup button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1500;
+}
+

@@ -105,5 +105,39 @@ for (let img of images) {
   };
 }
 
-// Inisialisasi tampilan
-showImage(currentIndex);
+function bukaPopup() {
+  document.getElementById("popupBooking").style.display = "block";
+}
+
+function tutupPopup() {
+  document.getElementById("popupBooking").style.display = "none";
+}
+
+function bukaPopupSuccess() {
+  document.getElementById("popupSuccess").style.display = "block";
+  startConfetti();
+}
+
+function tutupPopupSuccess() {
+  document.getElementById("popupSuccess").style.display = "none";
+  stopConfetti();
+}
+
+function startConfetti() {
+  const canvas = document.getElementById('confetti-canvas');
+  confetti.create(canvas, { resize: true })({
+    particleCount: 150,
+    spread: 70,
+    origin: { y: 0.6 }
+  });
+}
+
+function stopConfetti() {
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+
+
+
