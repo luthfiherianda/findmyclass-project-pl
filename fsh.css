@@ -256,6 +256,16 @@ td {
   color: #333;
 }
 
+tbody tr {
+  transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 tbody tr:hover {
   background-color: #f5f7fa;
+  transform: scale(1.02);
+
+}
+
+tbody tr:hover td {
+  font-weight: bold;
 }

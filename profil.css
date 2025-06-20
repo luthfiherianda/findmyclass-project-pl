@@ -222,82 +222,55 @@ body {
 .overlay.show {
     display: block;
 }
-
+/* --- Konten Utama --- */
 .main-content {
-  max-width: 1100px;
-  height: 92vh;
-  margin: 0 auto;
-  padding: 20px 40px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* ⬅️ Geser konten lebih ke atas */
-  align-items: center;
-  box-sizing: border-box;
+    padding: 30px;
 }
 
-.text {
-  text-align: center;
-  padding: 30px 10px 10px;  /* ⬅️ tambahkan padding atas agar naik */
-  opacity: 0;
-  transform: translateY(-40px);
-  animation: welcomeFadeIn 0.8s cubic-bezier(0.4,0,0.2,1) forwards;
+.profile-card {
+    background-color: white;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-@keyframes welcomeFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-top: 20px;
-  justify-items: center;
+.profile-card h2 {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.card {
-  background-color: white;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  position: relative;
- 
-  transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 1;
-
+.profile-info {
+    padding: 10px 20px;
 }
 
-.card:hover {
-  transform:scale(1.10); /* scale up + posisi normal */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
 }
 
-.card:active {
-  transform:scale(0.96); /* scale down + posisi normal */
+.info-row:last-child {
+    border-bottom: none;
 }
 
-.card img {
-  width: 300px;      /* ⬅️ diperbesar agar lebih proporsional */
-  height: 200px;
-  object-fit: cover;
-  filter: brightness(0.75);
-  
+.info-label {
+    color: #555;
 }
 
-.card span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 45px;
-  font-weight: 800;
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  pointer-events: none;
+.info-value {
+    color: #333;
+    text-align: right;
+}
+
+.recaptcha {
+    padding: 20px;
+}
+
+.recaptcha img {
+    height: 60px; /* Sesuaikan ukuran gambar reCAPTCHA */
 }

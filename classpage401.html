@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FindMyClass - FST</title>
+  <link rel="stylesheet" href="class page.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-text">
+                <img src="image/FindMyClass-Logo.png" alt="Logo FindMyClass" class="logo-sidebar"> <h1>FindMyClass</h1>
+            </div>
+            <button class="close-btn" id="close-btn">&times;</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">Gedung Fakultas <span class="arrow">&#9662;</span></a>
+                <ul class="submenu">
+                    <li><a href="fst.html">FST</a></li>
+                    <li><a href="fsh.html">FSH</a></li>
+                    <li><a href="fu.html">FU</a></li>
+                    <li><a href="feb.html">FEB</a></li>
+                    <li><a href="fisip.html">FISIP</a></li>
+                    <li><a href="fk.html">FK</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+  <!-- Header -->
+  <header class="main-header">
+  <button class="menu-btn" id="menu-btn">
+    <i class="fas fa-bars"></i>
+  </button>
+    <a href="index.html" class="logo">
+    <img src="image/FindMyClass-Logo.png" alt="Logo">
+    <h1>FindMyClass</h1>
+    </a>
+  <span class="user-greeting">Halo, {user}</span>
+</header>
+
+ <div class="container">
+    <div class="image-section">
+      <button class="arrow left" id="arrowLeft">&#8592;</button>
+        <div class="image-container" id="imageContainer">
+            <img src="image/FST.jpg" alt="Gambar 1" class="slide-image" />
+            <img src="image/FK.jpg" alt="Gambar 2" class="slide-image" />
+             <img src="image/FISIP.jpg" alt="Gambar 3" class="slide-image" />
+    <!-- Tambahkan gambar lain sesuai kebutuhan -->
+  </div>
+  <button class="arrow right" id="arrowRight">&#8594;</button>
+</div>
+    <div class="info-section">
+       <div class="info-section-text">
+           <h2>RUANG KELAS 4001</h2>
+       </div>
+       <div class="code-facility">
+           <p><strong>KODE RUANG:</strong> FST401</p>
+           <p><strong>KAPASITAS:</strong> 30 MAHASISWA</p>
+           
+           <div class="facilities">
+             <h3>Main Facilities</h3>
+             <ul>
+                <li>
+<ul style="list-style: none; padding: 0; margin: 0;">
+  <li style="display: flex; align-items: center; margin-bottom: 8px;">
+    <img src="image/fasilitas/ac.png" alt="AC" style="width:20px; height:20px; margin-right:8px;">
+    Air Conditioner (AC)
+  </li>
+  <li style="display: flex; align-items: center; margin-bottom: 8px;">
+    <img src="image/fasilitas/tv.png" alt="Smart TV" style="width:20px; height:20px; margin-right:8px;">
+    Smart TV
+  </li>
+  <li style="display: flex; align-items: center; margin-bottom: 8px;">
+    <img src="image/fasilitas/projector.png" alt="Projector" style="width:20px; height:20px; margin-right:8px;">
+    Projector
+  </li>
+  <li style="display: flex; align-items: center; margin-bottom: 8px;">
+    <img src="image/fasilitas/papantulis.png" alt="Whiteboard" style="width:20px; height:20px; margin-right:8px;">
+    Whiteboard
+  </li>
+</ul>
+             </ul>
+           </div>
+           <div class="description">
+             <p>
+               Kelas ini dilengkapi dengan fasilitas penunjang pembelajaran seperti AC untuk kenyamanan, papan tulis, projector, dan Smart TV untuk kebutuhan presentasi. Terdapat 30 bangku mahasiswa yang tertata rapi serta satu meja dosen yang siap menunjang kegiatan perkuliahan secara efektif.
+             </p>
+           </div>
+       </div>
+      <div class="buttons">
+        <button class="book-btn" onclick="bookClass()">Booking Kelas</button>
+        <button class="schedule-btn" onclick="cekJadwal()">Cek Jadwal</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="class page.js"></script>
+</body>
+</html>

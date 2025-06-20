@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FindMyClass - Profile</title>
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profil.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -26,7 +26,7 @@
                 <a href="#" onclick="toggleSubmenu(event)">Gedung Fakultas <span class="arrow">&#9662;</span></a>
                 <ul class="submenu">
                     <li><a href="fst.html">FST</a></li>
-                    <li><a href="#">FSH</a></li>
+                    <li><a href="fsh.html">FSH</a></li>
                     <li><a href="#">FU</a></li>
                     <li><a href="#">FEB</a></li>
                     <li><a href="#">FISIP</a></li>
@@ -38,7 +38,7 @@
     </nav>
     <div class="overlay" id="overlay"></div>
 
-    <header class="main-header">
+    <header class="main-header">    
         <div class="header-left">
             <button class="menu-btn" id="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -53,23 +53,36 @@
     </header>
 
     <main class="main-content">
-        <div class="background">
-            <div class="text">
-              <h1 class="heading-main">Selamat Datang di FindMyClass</h1>
-              <p class="subtext">Temukan ruang kelas terbaik di Kampusmu.</p>
-
+        <div class="profile-card">
+            <h2>Profile akun</h2>
+            <div class="profile-info">
+                <div class="info-row">
+                    <span class="info-label">Nama Lengkap</span>
+                    <span class="info-value">Gemma Pratama Kurniawan Farello Heriandra</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">NIM</span>
+                    <span class="info-value">124090310300NULL</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email</span>
+                    <span class="info-value">loremipsum24@mhs.uinjkt.ac.id</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Ganti Password</span>
+                    <span class="info-value">******************</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Password sebelumnya</span>
+                    <span class="info-value">******************</span>
+                </div>
             </div>
-          
-            <div class="card-grid">
-              <a href="fst.html"><div class="card"><img src="image/FST.jpg" alt="FST"><span>FST</span></div></a>
-              <a href="fsh.html"><div class="card"><img src="image/FSH.jpg" alt="FSH"><span>FSH</span></div></a>
-              <a href="fu.html"><div class="card"><img src="image/FU.jpg" alt="FU"><span>FU</span></div></a>
-              <a href="feb.html"><div class="card"><img src="image/FEB.jpg" alt="FEB"><span>FEB</span></div></a>
-              <a href="fisip.html"><div class="card"><img src="image/FISIP.jpg" alt="FISIP"><span>FISIP</span></div></a>
-              <a href="fk.html"><div class="card"><img src="image/FK.jpg" alt="FK"><span>FK</span></div></a>
-            </div>
+            <div class="recaptcha">
+                <img src="https://i.imgur.com/your-recaptcha-image.png" alt="reCAPTCHA"> </div>
         </div>
     </main>
-    <script src="script.js"></script>
+
+    <script src="profil.js"></script>
 </body>
 </html>
+w

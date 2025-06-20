@@ -28,3 +28,19 @@ function toggleSubmenu(event) {
   const parent = event.target.closest("li");
   parent.classList.toggle("open");
 }
+
+const table = document.getElementById("kelasTable");
+if (table) {
+  const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+  for (let row of rows) {
+    for (let cell of row.cells) {
+      cell.style.cursor = "pointer";
+      cell.onclick = function() {
+        // Ambil kode kelas dari kolom pertama pada baris ini
+        const kode = row.cells[0].textContent.trim();
+        const nomor = kode.replace(/\D/g, "");
+        window.location.href = `classpage${nomor}.html`;
+      };
+    }
+  }
+}

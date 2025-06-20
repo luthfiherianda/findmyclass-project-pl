@@ -110,7 +110,7 @@ body {
 
 .nav-links li a.active,
 .nav-links li a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.486);
 }
 
 .has-submenu > a {
@@ -155,121 +155,141 @@ body {
   text-align: center;
   color: white;
   overflow: hidden;
+  
 }
 
-
-
-/* Tambahkan lapisan gelap hanya ke background */
-.faculty-header::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* gelap separuh transparan */
-  z-index: 1;
-}
-
-/* Pastikan teks di atas overlay */
-.faculty-header .overlay-header {
-  position: relative;
-  z-index: 2;
-}
-
-.overlay-header {
+/* content */
+.container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 25px; /* jarak antara teks dan search bar */
-}
-
-.faculty-header h2 {
-  font-size: 40px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  margin: 0;
-}
-
-/* ====== SEARCH BOX ====== */
-.search-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.search-box input {
-  padding: 12px 16px;
-  font-size: 16px;
-  width: 300px;
-  border: none;
-  border-radius: 8px 0 0 8px;
-  height: 48px;
-  box-sizing: border-box;
-}
-
-.search-box button {
-  padding: 0 16px;
-  background: #003d80;
-  color: white;
-  border: none;
-  border-radius: 0 8px 8px 0;
-  cursor: pointer;
-  height: 48px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ====== KONTEN TABEL ====== */
-.fst-content {
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 0.5rem;
+  background-color:  #fcfcfc;
   max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-}
-
-.table-container {
-  background-color: white;
+  margin: 2rem auto;
   border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.image-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.image-container {
+  display: flex;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  margin: 0 auto;
+  width: 350px; /* atur sesuai kebutuhan */
+}
+.slide-image {
+  min-width: 100%;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.arrow {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.code-facility {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+  grid-template-rows: repeat(2, auto);   /* 2 baris */
+  gap: 1.5rem; /* jarak antar kartu */
+  padding: 0.2rem;
   max-width: 1000px;
+  margin: auto;
 }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  table-layout: fixed;
+.info-section {
+  flex: 1 1 50%;
 }
-
-th {
-  background-color: #004a99;
-  color: white;
-  padding: 16px;
-  text-align: left;
-}
-
-td {
-  padding: 14px 16px;
-  border-bottom: 1px solid #eee;
-  font-size: 15px;
-  color: #333;
-}
-
-tbody tr {
-  transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-tbody tr:hover {
-  background-color: #f5f7fa;
-  transform: scale(1.02);
+.info-section-text {
+  padding-bottom: 2px;
+  border-bottom: black 2px solid;
+  height: 35px;
+  width: 52%;
+  font-weight: 800;
+  font-size: larger;
+  
 
 }
 
-tbody tr:hover td {
-  font-weight: bold;
+.facilities{
+    background-color: #ffffff;
+    padding: 0.5px;
+    height: 85%;
+    border: transparent 1px solid;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.336);
+}
+
+.facilities h3{
+    text-align: center;
+    margin: 6px;
+    border-bottom: gray 2px solid;
+    font-weight: normal;
+}
+.facilities ul{
+   color: #0D99FF;
+   font-weight: 500;
+   padding-left:2px ;
+}
+
+.facilities ul li {
+  padding :5px;
+  margin-right: 3px;
+  list-style: none;
+  margin-top: 1px;
+  Transform: translateY(-6px);
+}
+
+.description{
+   background-color: #ffffff;
+    padding: 5px;
+    height: 100%;
+    border: transparent 1px solid;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.342);
+}
+
+.description p{
+  margin-top:1;
+  margin-bottom: 1px;
+  font-size: 1.1rem;
+}
+
+.buttons button {
+  margin-top:2rem ;
+  padding: 1rem 1.2rem;
+  font-size: 0.95rem;
+  border-radius: 15px;
+  font-weight: 600;
+  gap: 20px;
+  border-color:transparent ;
+}
+
+.book-btn{
+  margin-left: 0.5rem;
+  color: #ffffff;
+  background-color: #1D4ED8;
+}
+.book-btn:hover{
+  background-color: #1E40AF;
+}
+
+.schedule-btn{
+  margin-left: 0.5rem;
+  color: #ffffff;
+  background-color: #5291DC;
+}
+.schedule-btn:hover{
+  background-color: #2e75e9;
 }
