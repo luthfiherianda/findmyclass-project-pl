@@ -138,6 +138,47 @@ function stopConfetti() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
+function cekJadwal() {
+  document.getElementById("popupJadwal").style.display = "block";
+  document.getElementById("jadwalTabel").innerHTML = `<tr><td colspan="2">Silakan pilih tanggal</td></tr>`;
+}
+
+function tutupPopupJadwal() {
+  document.getElementById("popupJadwal").style.display = "none";
+}
+
+function ambilJadwal() {
+  const tanggal = document.getElementById("tanggalJadwal").value;
+  const tbody = document.getElementById("jadwalTabel");
+
+  if (!tanggal) {
+    alert("Pilih tanggal terlebih dahulu!");
+    return;
+  }
+
+  fetch(`get_bookings.php?tanggal=${tanggal}`)
+    .then(res => res.json())
+    .then(data => {
+      tbody.innerHTML = "";
+      if (data.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="2">Tidak ada jadwal</td></tr>`;
+      } else {
+        data.forEach(item => {
+          tbody.innerHTML += `
+            <tr>
+              <td>${item.jam}</td>
+              <td><span class="badge">${item.status}</span></td>
+            </tr>
+          `;
+        });
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      tbody.innerHTML = `<tr><td colspan="2">Gagal mengambil data</td></tr>`;
+    });
+}
+
 
 
 

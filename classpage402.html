@@ -121,6 +121,27 @@
     <canvas id="confetti-canvas"></canvas>
   </div>
 
+  <!-- POPUP CEK JADWAL -->
+<div id="popupJadwal" class="popup">
+  <h2>JADWAL PEMAKAIAN</h2>
+  <div style="margin-bottom: 1rem;">
+    <input type="date" id="tanggalJadwal" />
+    <button onclick="ambilJadwal()">Lihat</button>
+  </div>
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr><th>Jam</th><th>Status</th></tr>
+    </thead>
+    <tbody id="jadwalTabel">
+      <tr><td colspan="2" style="text-align: center;">Silakan pilih tanggal</td></tr>
+    </tbody>
+  </table>
+  <div class="buttons" style="margin-top: 1rem; text-align: right;">
+    <button onclick="tutupPopupJadwal()">Tutup</button>
+  </div>
+</div>
+
+
   <script src="class page.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </body>
