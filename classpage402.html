@@ -121,21 +121,25 @@
     <canvas id="confetti-canvas"></canvas>
   </div>
 
-  <!-- POPUP CEK JADWAL -->
-<div id="popupJadwal" class="popup">
+  <div id="popupJadwal" class="popup">
   <h2>JADWAL PEMAKAIAN</h2>
-  <div style="margin-bottom: 1rem;">
-    <input type="date" id="tanggalJadwal" />
-    <button onclick="ambilJadwal()">Lihat</button>
+
+  <div class="kalender-header">
+    <button onclick="gantiBulan(-1)">&#8592;</button>
+    <span id="kalenderLabel"></span>
+    <button onclick="gantiBulan(1)">&#8594;</button>
   </div>
-  <table style="width: 100%; border-collapse: collapse;">
-    <thead>
-      <tr><th>Jam</th><th>Status</th></tr>
-    </thead>
-    <tbody id="jadwalTabel">
-      <tr><td colspan="2" style="text-align: center;">Silakan pilih tanggal</td></tr>
-    </tbody>
-  </table>
+
+  <div id="kalenderGrid" class="kalender-grid"></div>
+
+  <div class="jadwal-hari">
+    <h3 id="judulTanggal">Pilih tanggal</h3>
+    <table style="width: 100%; border-collapse: collapse;">
+      <thead><tr><th>Jam</th><th>Status</th></tr></thead>
+      <tbody id="jadwalTabel"><tr><td colspan="2">-</td></tr></tbody>
+    </table>
+  </div>
+
   <div class="buttons" style="margin-top: 1rem; text-align: right;">
     <button onclick="tutupPopupJadwal()">Tutup</button>
   </div>

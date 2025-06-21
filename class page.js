@@ -179,6 +179,94 @@ function ambilJadwal() {
     });
 }
 
+let bulanSekarang = new Date().getMonth();
+let tahunSekarang = new Date().getFullYear();
+
+function cekJadwal() {
+  document.getElementById("popupJadwal").style.display = "block";
+  renderKalender(tahunSekarang, bulanSekarang);
+}
+
+function tutupPopupJadwal() {
+  document.getElementById("popupJadwal").style.display = "none";
+}
+
+function gantiBulan(offset) {
+  bulanSekarang += offset;
+  if (bulanSekarang < 0) {
+    bulanSekarang = 11;
+    tahunSekarang--;
+  } else if (bulanSekarang > 11) {
+    bulanSekarang = 0;
+    tahunSekarang++;
+  }
+  renderKalender(tahunSekarang, bulanSekarang);
+}
+
+function renderKalender(tahun, bulan) {
+  const grid = document.getElementById("kalenderGrid");
+  const label = document.getElementById("kalenderLabel");
+  const namaBulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+  label.textContent = `${namaBulan[bulan]} ${tahun}`;
+  grid.innerHTML = "";
+
+  const hari = ["Sen", "Sel", "Rab", "Kam", "Jum", "Sab", "Min"];
+  hari.forEach(h => {
+    const head = document.createElement("div");
+    head.textContent = h;
+    head.classList.add("header");
+    grid.appendChild(head);
+  });
+
+  const firstDay = new Date(tahun, bulan, 1);
+  const startDay = (firstDay.getDay() + 6) % 7;
+  const totalDays = new Date(tahun, bulan + 1, 0).getDate();
+  const today = new Date();
+
+  for (let i = 0; i < startDay; i++) grid.appendChild(document.createElement("div"));
+
+  for (let d = 1; d <= totalDays; d++) {
+    const cell = document.createElement("div");
+    cell.textContent = d;
+    const tgl = new Date(tahun, bulan, d);
+
+    if (
+      tgl.getDate() === today.getDate() &&
+      tgl.getMonth() === today.getMonth() &&
+      tgl.getFullYear() === today.getFullYear()
+    ) {
+      cell.classList.add("today");
+    }
+
+    cell.onclick = () => pilihTanggal(tahun, bulan + 1, d);
+    grid.appendChild(cell);
+  }
+}
+
+function pilihTanggal(th, bl, tgl) {
+  const tanggalStr = `${th}-${bl.toString().padStart(2, '0')}-${tgl.toString().padStart(2, '0')}`;
+  document.getElementById("judulTanggal").textContent = `Jadwal ${tanggalStr}`;
+
+  fetch(`get_bookings.php?tanggal=${tanggalStr}`)
+    .then(res => res.json())
+    .then(data => {
+      const tbody = document.getElementById("jadwalTabel");
+      tbody.innerHTML = "";
+
+      if (data.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="2">Tidak ada jadwal</td></tr>`;
+      } else {
+        data.forEach(item => {
+          tbody.innerHTML += `
+            <tr>
+              <td>${item.jam}</td>
+              <td><span class="badge">${item.status}</span></td>
+            </tr>
+          `;
+        });
+      }
+    });
+}
 
 
 
