@@ -8,12 +8,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
 <body>
-
   <!-- Sidebar -->
   <nav class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="logo-text">
-        <img src="image/FindMyClass-Logo.png" alt="Logo FindMyClass" class="logo-sidebar" />
+        <img src="image/FindMyClass-Logo.png" alt="Logo FindMyClass" class="logo-sidebar">
         <h1>FindMyClass</h1>
       </a>
       <button class="close-btn" id="close-btn">&times;</button>
@@ -35,36 +34,42 @@
       <li><a href="feedback.html" class="active">Feedback</a></li>
     </ul>
   </nav>
-
   <div class="overlay" id="overlay"></div>
 
   <!-- Header -->
-  <header class="main-header">
+<header class="main-header">
+  <div class="header-left">
     <button class="menu-btn" id="menu-btn">
       <i class="fas fa-bars"></i>
     </button>
-    <div class="logo-center">
+    <div class="logo">
       <img src="image/FindMyClass-Logo.png" alt="Logo FindMyClass" />
       <h1>FindMyClass</h1>
     </div>
-    <div class="header-right">
-      <span>Halo, {user}</span>
-    </div>
-  </header>
+  </div>
+  <div class="header-right">
+    <span>Halo, {user}</span>
+  </div>
+</header>
 
   <!-- Main Content -->
   <main class="main-content">
-    <form class="feedback-form">
+    <div class="feedback-container">
       <h2 class="form-title">Kritik & Saran</h2>
       <p class="form-description">Kami sangat menghargai masukan Anda untuk meningkatkan layanan FindMyClass.</p>
-      <label for="name">Nama (opsional)</label>
-      <input type="text" id="name" placeholder="Nama Anda" />
-      <label for="email">Email (opsional)</label>
-      <input type="email" id="email" placeholder="Email Anda" />
-      <label for="message">Pesan</label>
-      <textarea id="message" rows="4" placeholder="Tulis kritik, saran, atau komentar Anda di sini..."></textarea>
-      <button type="submit">Kirim</button>
-    </form>
+      <form class="feedback-form">
+        <label for="name">Nama (opsional)</label>
+        <input type="text" id="name" placeholder="Nama Anda">
+
+        <label for="email">Email (opsional)</label>
+        <input type="email" id="email" placeholder="Email Anda">
+
+        <label for="message">Pesan</label>
+        <textarea id="message" rows="5" placeholder="Tulis kritik, saran, atau komentar Anda di sini..."></textarea>
+
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
   </main>
 
   <script src="script.js"></script>

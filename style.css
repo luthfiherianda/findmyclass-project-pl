@@ -234,14 +234,14 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* ⬅️ Geser konten lebih ke atas */
+  justify-content: flex-start; /* ⬅ Geser konten lebih ke atas */
   align-items: center;
   box-sizing: border-box;
 }
 
 .text {
   text-align: center;
-  padding: 30px 10px 10px;  /* ⬅️ tambahkan padding atas agar naik */
+  padding: 30px 10px 10px;  /* ⬅ tambahkan padding atas agar naik */
   opacity: 0;
   transform: translateY(-40px);
   animation: welcomeFadeIn 0.8s cubic-bezier(0.4,0,0.2,1) forwards;
@@ -283,7 +283,7 @@ body {
 }
 
 .card img {
-  width: 300px;      /* ⬅️ diperbesar agar lebih proporsional */
+  width: 300px;      /* ⬅ diperbesar agar lebih proporsional */
   height: 200px;
   object-fit: cover;
   filter: brightness(0.75);
@@ -300,4 +300,72 @@ body {
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   pointer-events: none;
+}
+
+.feedback-container {
+  width: 100%;
+  max-width: 550px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  text-align: left;
+  margin-top: 40px;
+}
+
+.feedback-container h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.feedback-container p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.feedback-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.feedback-form button {
+  margin-top: 20px;
+  background-color: #004a99;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #005cb3;
+}
+
+.form-title {
+  text-align: center;
+  display: block;
+}
+
+.form-description {
+  text-align: left;
+  display: block;
 }

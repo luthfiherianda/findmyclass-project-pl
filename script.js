@@ -1,4 +1,4 @@
-// Ambil elemen-elemen yang dibutuhkan dari DOMAdd commentMore actions
+// Ambil elemen-elemen yang dibutuhkan dari DOM
 const menuBtn = document.getElementById('menu-btn');
 const closeBtn = document.getElementById('close-btn');
 const sidebar = document.getElementById('sidebar');
@@ -30,3 +30,9 @@ function toggleSubmenu(event) {
   const parent = event.target.closest('li');
   parent.classList.toggle('open');
 }
+
+// Tangani form feedback agar tidak reload (opsional)
+document.querySelector('.feedback-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert("Terima kasih atas masukan Anda!");
+});
