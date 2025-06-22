@@ -146,16 +146,22 @@ body {
 /* ====== HEADER GAMBAR FAKULTAS ====== */
 .faculty-header {
   position: relative;
-  background: url("image/FISIP.jpg") no-repeat center 85%;
+  inset: 0;
+  width: 100%;
+  max-width: 100%;
+  background: url("image/FISIP.jpg") center center no-repeat;
   background-size: cover;
   height: 250px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
   overflow: hidden;
+  padding: 0; /* Tambahan untuk pastikan tak ada padding luar */
 }
+
 
 
 
