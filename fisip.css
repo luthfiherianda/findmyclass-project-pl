@@ -279,3 +279,12 @@ tbody tr:hover {
 tbody tr:hover td {
   font-weight: bold;
 }
+
+.arrow {
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.open .arrow {
+  transform: rotate(180deg); /* jadi panah ke atas */
+}

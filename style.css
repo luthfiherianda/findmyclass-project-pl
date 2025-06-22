@@ -166,8 +166,6 @@ body {
   display: block;
 }
 
-
-
 .close-btn {
     background: none;
     border: none;
@@ -368,4 +366,26 @@ body {
 .form-description {
   text-align: left;
   display: block;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  margin-top: 40px;
+}
+
+.profile-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  font-size: 15px;
+  margin-bottom: 10px;
 }
