@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindMyClass - Profile</title>
+    
+    <link rel="stylesheet" href="profil.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo-text">
+                <img src="image/FindMyClass-Logo.png" alt="Logo FindMyClass" class="logo-sidebar">
+                <h1>FindMyClass</h1>
+            </a>
+            <button class="close-btn" id="close-btn">&times;</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="Profil.html">Profile</a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">Gedung Fakultas <span class="arrow">&#9662;</span></a>
+                <ul class="submenu">
+                    <li><a href="fst.html">FST</a></li>
+                    <li><a href="fsh.html">FSH</a></li>
+                    <li><a href="fu.html">FU</a></li>
+                    <li><a href="feb.html">FEB</a></li>
+                    <li><a href="fisip.html">FISIP</a></li>
+                    <li><a href="fk.html">FK</a></li>
+                </ul>
+            </li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+    <header class="main-header">    
+        <div class="header-left">
+            <button class="menu-btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <img src="image/FindMyClass-Logo.png" alt="Logo FindMyClass"> <h1>FindMyClass</h1>
+            </div>
+        </div>
+        <div class="header-right">
+            <span>Halo, {user}</span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="profile-card">
+            <h2>Profile akun</h2>
+            <div class="profile-info">
+                <div class="info-row">
+                    <span class="info-label">Nama Lengkap</span>
+                    <span class="info-value">Gemma Pratama Kurniawan Farello Heriandra</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">NIM</span>
+                    <span class="info-value">124090310300NULL</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email</span>
+                    <span class="info-value">loremipsum24@mhs.uinjkt.ac.id</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Ganti Password</span>
+                    <span class="info-value">******************</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Password sebelumnya</span>
+                    <span class="info-value">******************</span>
+                </div>
+            </div>
+            <div class="recaptcha">
+                <img src="https://i.imgur.com/your-recaptcha-image.png" alt="reCAPTCHA"> </div>
+        </div>
+    </main>
+
+    <script src="profil.js"></script>
+</body>
+</html>
+w
