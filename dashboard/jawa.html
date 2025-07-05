@@ -1,0 +1,44 @@
+<div id="navbar-container"></div>
+<script>
+fetch('../navbar/navbar.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('navbar-container').innerHTML = data;
+  });
+</script>
+
+<header class="main-header">
+        <div class="header-left">
+            <button class="menu-btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <img src="../image/FindMyClass-Logo.png" alt="Logo FindMyClass"> <h1>FindMyClass</h1>
+            </div>
+        </div>
+        <div class="header-right">
+            <span>Halo, {user}</span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="background">
+            <div class="text">
+              <h1 class="heading-main">Selamat Datang di FindMyClass</h1>
+              <p class="subtext">Temukan ruang kelas terbaik di Kampusmu.</p>
+
+            </div>
+          
+            <div class="card-grid">
+              <a href="../gedung/fst.html"><div class="card"><img src="../image/FST.jpg" alt="FST"><span>FST</span></div></a>
+              <a href="../gedung/fsh.html"><div class="card"><img src="../image/FSH.jpg" alt="FSH"><span>FSH</span></div></a>
+              <a href="../gedung/fu.html"><div class="card"><img src="../image/FU.jpg" alt="FU"><span>FU</span></div></a>
+              <a href="../gedung/feb.html"><div class="card"><img src="../image/FEB.jpg" alt="FEB"><span>FEB</span></div></a>
+              <a href="../gedung/fisip.html"><div class="card"><img src="../image/FISIP.jpg" alt="FISIP"><span>FISIP</span></div></a>
+              <a href="../gedung/fk.html"><div class="card"><img src="../image/FK.jpg" alt="FK"><span>FK</span></div></a>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

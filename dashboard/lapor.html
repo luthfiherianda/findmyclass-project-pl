@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laporan Kerusakan - FindMyClass</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="logo-text">
+        <img src="../image/FindMyClass-Logo.png" alt="Logo FindMyClass" class="logo-sidebar">
+        <h1>FindMyClass</h1>
+      </a>
+      <button class="close-btn" id="close-btn">&times;</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Profil.html">Profile</a></li>
+      <li class="has-submenu">
+        <a href="#" onclick="toggleSubmenu(event)">Gedung Fakultas <span class="arrow">&#9662;</span></a>
+        <ul class="submenu">
+          <li><a href="../gedung/fst.html">FST</a></li>
+          <li><a href="../gedung/fsh.html">FSH</a></li>
+          <li><a href="../gedung/fu.html">FU</a></li>
+          <li><a href="../gedung/feb.html">FEB</a></li>
+          <li><a href="../gedung/fisip.html">FISIP</a></li>
+          <li><a href="../gedung/fk.html">FK</a></li>
+        </ul>
+      </li>
+      <li><a href="lapor.html" class="active">Laporkan</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-left">
+      <button class="menu-btn" id="menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="logo">
+        <img src="../image/FindMyClass-Logo.png" alt="Logo FindMyClass" />
+        <h1>FindMyClass</h1>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="user-greeting" id="user-greeting">Halo, {user}</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="feedback-container">
+      <h2 class="form-title">Laporan Kerusakan Ruangan</h2>
+      <p class="form-description">Laporkan kondisi kelas atau fasilitas yang rusak agar kami dapat segera menindaklanjuti.</p>
+      <form class="feedback-form" id="laporForm">
+        <label for="name">Nama</label>
+        <input type="text" id="name" placeholder="Nama Anda">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Email Anda">
+
+        <label for="lokasi">Lokasi / Nomor Ruangan</label>
+        <input type="text" id="lokasi" placeholder="Contoh: Gedung FST, Ruang 203" required>
+
+        <label for="deskripsi">Deskripsi Kerusakan</label>
+        <textarea id="deskripsi" rows="5" placeholder="Jelaskan kerusakan atau kendala ruangan..." required></textarea>
+
+        <button type="submit">Laporkan</button>
+        <p id="laporSuccess" class="hidden">Laporan Anda telah dikirim. Terima kasih!</p>
+      </form>
+    </div>
+  </main>
+
+  <script src="lapor.js"></script>
+</body>
+</html>
