@@ -1,45 +1,33 @@
 package com.rajakoding.FindMyClass.controller;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Map;
 
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rajakoding.FindMyClass.model.Kelas;
+import com.rajakoding.FindMyClass.service.KelasService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/kelas")
+@CrossOrigin(origins = "*")
 public class KelasController {
 
-    private Map<String, Kelas> kelasMap;
+    @Autowired
+    private KelasService kelasService;
 
-   public KelasController() throws IOException {
-    ObjectMapper mapper = new ObjectMapper();
-    try (InputStream is = new ClassPathResource("kelas-fst.json").getInputStream()) {
-        kelasMap = mapper.readValue(
-            is,
-            mapper.getTypeFactory().constructMapType(Map.class, String.class, Kelas.class)
-        );
+    @GetMapping
+    public List<Kelas> getAllKelas() {
+        return kelasService.getAllKelas();
+    }
+
+    @PostMapping
+    public Kelas saveKelas(@RequestBody Kelas kelas) {
+        return kelasService.saveKelas(kelas);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteKelas(@PathVariable Long id) {
+        kelasService.deleteKelas(id);
     }
 }
 
-
-    @GetMapping("/")
-    public String index(Model model) {
-        model.addAttribute("kelasList", kelasMap);
-        return "index";
-    }
-
-    @GetMapping("/booking/{kode}")
-    public String bookingPage(@PathVariable String kode, Model model) {
-        Kelas kelas = kelasMap.get(kode);
-        if (kelas == null) return "redirect:/";
-        model.addAttribute("kode", kode);
-        model.addAttribute("kelas", kelas);
-        return "booking";
-    }
-}

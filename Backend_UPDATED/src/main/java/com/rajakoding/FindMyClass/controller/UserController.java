@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
@@ -17,36 +19,32 @@ public class UserController {
 
     @PostMapping("/signup")
     public ResponseEntity<User> signup(@RequestBody User user) {
+        // Validasi apakah username sudah dipakai
+        Optional<User> existingUser = userService.findByUsername(user.getUsername());
+        if (existingUser.isPresent()) {
+            return ResponseEntity.badRequest().build(); // Username sudah dipakai
+        }
         return ResponseEntity.ok(userService.register(user));
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody LoginRequest request) {
+    public ResponseEntity<User> login(@RequestBody LoginRequest request) {
         return userService.findByUsername(request.getUsername())
                 .filter(user -> user.getPassword().equals(request.getPassword()))
-                .map(user -> ResponseEntity.ok("Login berhasil"))
-                .orElse(ResponseEntity.status(401).body("Login gagal"));
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.status(401).build());
+    }
+
+    @GetMapping("/user/by-username/{username}")
+    public ResponseEntity<User> getUserByUsername(@PathVariable String username) {
+        return userService.findByUsername(username)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
     @Data
     static class LoginRequest {
-    private String username;
-    private String password;
-
-    public String getUsername() {
-        return username;
+        private String username;
+        private String password;
     }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-}
 }

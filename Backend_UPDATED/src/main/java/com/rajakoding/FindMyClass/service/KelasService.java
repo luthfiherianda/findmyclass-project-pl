@@ -20,4 +20,8 @@ public class KelasService {
     public Kelas saveKelas(Kelas kelas) {
         return kelasRepository.save(kelas);
     }
+
+    public void deleteKelas(Long id) {
+        kelasRepository.deleteById(id);
+    }
 }

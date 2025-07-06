@@ -1,9 +1,9 @@
 package com.rajakoding.FindMyClass.repository;
 
-import com.rajakoding.FindMyClass.model.Kelas;
+import com.rajakoding.FindMyClass.model.Report;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface KelasRepository extends JpaRepository<Kelas, Long> {
+public interface ReportRepository extends JpaRepository<Report, Long> {
 }
