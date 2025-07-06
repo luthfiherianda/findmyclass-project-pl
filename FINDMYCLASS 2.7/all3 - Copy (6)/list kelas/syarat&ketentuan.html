@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ketentuan</title>
+  <link rel="stylesheet" href="syarat&ketentuan.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+</head>
+<body>
+  <div class="overlay" id="popup">
+    <div class="popup">
+      <div class="title">
+        <h2>Ketentuan Pemesanan Fasilitas Ruangan</h2> 
+        <span class="material-symbols-outlined" id="closePopup">
+        close
+        </span>
+      </div>
+      <div class="content-scroll" id="scrollContent">
+        <p>Yth. Mahasiswa,</p>
+        <p>
+          Dengan melakukan pemesanan ruangan ini, Anda secara sadar menyetujui seluruh ketentuan yang berlaku:
+        </p>
+
+        <p><strong>1. Tanggung Jawab Penuh Pemesan:</strong> Mahasiswa yang namanya tercatat sebagai pemesan ("Pemesan") adalah penanggung jawab utama atas ruangan. Tanggung jawab ini mencakup pemeliharaan kebersihan, ketertiban, dan keutuhan seluruh inventaris selama periode penggunaan.</p>
+
+        <p><strong>2. Kebijakan Pembatalan:</strong> Pembatalan pemesanan hanya dapat diproses dalam jangka waktu maksimal 1 (satu) jam setelah pemesanan dikonfirmasi. Permintaan pembatalan yang melewati batas waktu tersebut tidak akan diterima.</p>
+
+        <p><strong>3. Sanksi Atas Pelanggaran:</strong> Pihak pengelola/operator berhak menjatuhkan sanksi kepada Pemesan yang terbukti lalai atau tidak mematuhi ketentuan. Pelanggaran mencakup, namun tidak terbatas pada, <em>meninggalkan ruangan dalam keadaan kotor, menyebabkan kerusakan, menghilangkan fasilitas, atau tidak menggunakan ruangan yang telah dipesan tanpa pembatalan (no-show).</em></p>
+
+        <p>Sanksi yang dapat diberlakukan adalah:</p>
+        <ul>
+          <li>- Teguran resmi.</li>
+          <li>- Pencabutan sementara atau permanen hak untuk melakukan pemesanan fasilitas di masa mendatang (blacklist).</li>
+        </ul>
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="agree" disabled />
+        <label for="agree">Ya, saya setuju dengan semua ketentuan yang telah disebutkan.</label>
+      </div>
+
+      <button id="continueBtn" disabled>Lanjutkan</button>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const scrollContent = document.getElementById("scrollContent");
+  const checkbox = document.getElementById("agree");
+  const continueBtn = document.getElementById("continueBtn");
+  const closeBtn = document.getElementById("closePopup");
+  const popup = document.getElementById("popup");
+
+  scrollContent.addEventListener("scroll", () => {
+    const bottomReached =
+      scrollContent.scrollTop + scrollContent.clientHeight >= scrollContent.scrollHeight - 1;
+
+    if (bottomReached) {
+      checkbox.disabled = false;
+    }
+  });
+
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+      continueBtn.disabled = false;
+      continueBtn.classList.add("enabled");
+    } else {
+      continueBtn.disabled = true;
+      continueBtn.classList.remove("enabled");
+    }
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+});
+
+  </script>
+</body>
+
+</html>

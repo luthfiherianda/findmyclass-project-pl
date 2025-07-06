@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" href="sign up.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <div class="header">
+        <h1>Sign Up</h1>
+        <p>Please enter your credentials.</p>
+      </div>
+
+      <form id="signup-form">
+        <input type="text" name="username" placeholder="Nama Lengkap" required />
+        <input type="text" name="nim" placeholder="NIM" required />
+        <input type="email" name="email" placeholder="Email" required />
+
+        <div class="password-wrapper">
+          <input type="password" name="password" id="password" placeholder="Password" required />
+          <span class="toggle-password" onclick="toggleVisibility('password', this)">
+            <i class="fas fa-eye"></i>
+          </span>
+        </div>
+
+        <button type="submit">Sign Up</button>
+        <p class="bottom-text">
+          Sudah punya akun? <a href="/all3 - Copy (6)/all3 - Copy/findmyclass-project-pl/dashboard/login.html">Login</a>
+        </p>
+      </form>
+    </div>
+    <div class="image-section">
+      <!-- Kosong / bisa ditambahkan gambar -->
+    </div>
+  </div>
+
+  <script src="sign up.script.js"></script>
+</body>
+</html>

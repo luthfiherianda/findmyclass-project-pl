@@ -1,0 +1,78 @@
+/* Gaya popup full overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* Gaya kotak popup */
+.popup {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  width: 450px;
+  max-height: 90vh;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title{
+  padding-bottom:10px;
+  margin: 0;
+  border-bottom: solid 0.5px #555;
+  display: flex;
+  gap: 103px;
+}
+
+.title h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.title span{
+cursor: pointer;
+}
+
+/* Konten yang bisa di-scroll */
+.content-scroll {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Checkbox + label */
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+}
+
+/* Tombol */
+#continueBtn {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #888;
+  color: white;
+  font-weight: bold;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#continueBtn.enabled {
+  background-color: #1573df;
+  cursor: pointer;
+  opacity: 1;
+}
+
+#continueBtn:hover.enabled {
+  background-color:#4095f7 ;
+}

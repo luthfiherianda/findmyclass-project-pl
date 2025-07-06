@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FindMyClass - FU</title>
+  <link rel="stylesheet" href="fu.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-text">
+                <img src="../image/FindMyClass-Logo.png" alt="Logo FindMyClass" class="logo-sidebar"> <h1>FindMyClass</h1>
+            </div>
+            <button class="close-btn" id="close-btn">&times;</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../dashboard/index.html">Home</a></li>
+            <li><a href="../dashboard/Profil.html">Profile</a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">Gedung Fakultas <span class="arrow">&#9662;</span></a>
+                <ul class="submenu">
+                    <li><a href="fst.html">FST</a></li>
+                    <li><a href="fsh.html">FSH</a></li>
+                    <li><a href="fu.html" class="active">FU</a></li>
+                    <li><a href="feb.html">FEB</a></li>
+                    <li><a href="fisip.html">FISIP</a></li>
+                    <li><a href="fk.html">FK</a></li>
+                </ul>
+            </li>
+            <li><a href="../dashboard/lapor.html">Laporkan</a></li>
+            <li><a href="../dashboard/feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+  <!-- Header -->
+  <header class="main-header">
+  <button class="menu-btn" id="menu-btn">
+    <i class="fas fa-bars"></i>
+  </button>
+    <a href="../dashboard/index.html" class="logo">
+    <img src="../image/FindMyClass-Logo.png" alt="Logo">
+    <h1>FindMyClass</h1>
+    </a>
+   <span class="user-greeting" id="user-greeting">Halo, {user}</span>
+</header>
+
+  <!-- Konten FU -->
+  <!-- HEADER: Background Gambar FU -->
+<header class="faculty-header">
+  <div class="overlay-header">
+    <h2>FAKULTAS USHULUDDIN</h2>
+    <div class="search-box">
+      <input type="text" placeholder="Cari kode kelasmu" id="searchInput">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN: Tabel Data Kelas -->
+<main class="fu-content">
+  <div class="table-container">
+    <table id="kelasTable">
+      <thead>
+        <tr>
+          <th>KODE KELAS</th>
+          <th>RUANG</th>
+          <th>KAPASITAS</th>
+          <th>FASILITAS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>FU4001</td><td>4001</td><td>30</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FU4002</td><td>4002</td><td>30</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FU4003</td><td>4003</td><td>25</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FU4004</td><td>4004</td><td>25</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FU4005</td><td>4005</td><td>25</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FU4006</td><td>4006</td><td>25</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FU4007</td><td>4007</td><td>25</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FU4008</td><td>4008</td><td>26</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        
+      </tbody>
+    </table>
+
+  </div>
+</main>
+
+
+  <script src="fu.js"></script>
+</body>
+</html>
