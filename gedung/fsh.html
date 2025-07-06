@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FindMyClass - FSH</title>
+  <link rel="stylesheet" href="fsh.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-text">
+                <img src="../image/FindMyClass-Logo.png" alt="Logo FindMyClass" class="logo-sidebar"> <h1>FindMyClass</h1>
+            </div>
+            <button class="close-btn" id="close-btn">&times;</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../dashboard/index.html">Home</a></li>
+            <li><a href="../dashboard/Profil.html">Profile</a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">Gedung Fakultas <span class="arrow">&#9662;</span></a>
+                <ul class="submenu">
+                    <li><a href="../gedung/fst.html">FST</a></li>
+                    <li><a href="../gedung/fsh.html" class="active">FSH</a></li>
+                    <li><a href="../gedung/fu.html">FU</a></li>
+                    <li><a href="../gedung/feb.html">FEB</a></li>
+                    <li><a href="../gedung/fisip.html">FISIP</a></li>
+                    <li><a href="../gedung/fk.html">FK</a></li>
+                </ul>
+            </li>
+            <li><a href="../dashboard/feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+  <!-- Header -->
+  <header class="main-header">
+  <button class="menu-btn" id="menu-btn">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="logo">
+    <a href="../dashboard/index.html" class="logo">
+    <img src="../image/FindMyClass-Logo.png" alt="Logo">
+    <h1>FindMyClass</h1>
+    </a>
+  </div>
+   <span class="user-greeting" id="user-greeting">Halo, {user}</span>
+</header>
+
+  <!-- Konten FSH -->
+  <!-- HEADER: Background Gambar FSH -->
+<header class="faculty-header">
+  <div class="overlay-header">
+    <h2>FAKULTAS SYARIAH DAN HUKUM</h2>
+    <div class="search-box">
+      <input type="text" placeholder="Cari kode kelasmu" id="searchInput">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN: Tabel Data Kelas -->
+<main class="fsh-content">
+  <div class="table-container">
+    <table id="kelasTable">
+      <thead>
+        <tr>
+          <th>KODE KELAS</th>
+          <th>RUANG</th>
+          <th>KAPASITAS</th>
+          <th>FASILITAS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>FSH4001</td><td>4001</td><td>30</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FSH4002</td><td>4002</td><td>30</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FSH4003</td><td>4003</td><td>25</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FSH4004</td><td>4004</td><td>25</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FSH4005</td><td>4005</td><td>25</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FSH4006</td><td>4006</td><td>25</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FSH4007</td><td>4007</td><td>25</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+        <tr><td>FSH4008</td><td>4008</td><td>26</td><td>AC, SMART TV, WHITEBOARD</td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+
+  <script src="fsh.js"></script>
+</body>
+</html>
