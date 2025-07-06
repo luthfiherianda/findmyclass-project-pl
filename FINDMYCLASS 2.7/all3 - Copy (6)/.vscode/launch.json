@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FindMyClassApplication<FindMyClass>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.rajakoding.FindMyClass.FindMyClassApplication",
+            "projectName": "FindMyClass",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
